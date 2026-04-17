@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Om Girkar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-text">Loading Identity</div>
+            <div class="loader-percent" id="loader-percent">0%</div>
+        </div>
+        <div class="loader-bar-container">
+            <div class="loader-bar-fill" id="loader-fill"></div>
+        </div>
+    </div>
+
+    <div class="nav-wrapper">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="nav-avatar">OG</a>
+                <div class="nav-links">
+                    <a href="index.html#skills" class="nav-link">Skills</a>
+                    <a href="index.html#work" class="nav-link">Works</a>
+                    <a href="about.html" class="nav-link" style="color: var(--accent-10);">About Me</a>
+                </div>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" /></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" /></svg>
+                </button>
+                <a href="mailto:om.girkar2@gmail.com" class="nav-btn">Contact</a>
+                <button class="hamburger" id="hamburger" aria-label="Open Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html#skills" class="mobile-menu-link">Skills</a>
+        <a href="index.html#work" class="mobile-menu-link">Works</a>
+        <a href="about.html" class="mobile-menu-link" style="color: var(--accent-10);">About Me</a>
+        <a href="mailto:om.girkar2@gmail.com" class="big-contact-btn" style="margin-top: 2rem;">Say Hello <span>→</span></a>
+    </div>
+
+    <div class="section-container about-layout fade-in">
+        
+        <div class="profile-sidebar">
+            <div class="profile-avatar">OG</div>
+            <h2 class="profile-name">Om Girkar</h2>
+            <p class="profile-handle">@omgirkar • Mumbai, India 🇮🇳</p>
+            <p class="profile-role">Creative Developer & Founder</p>
+            <a href="mailto:om.girkar2@gmail.com" class="big-contact-btn" style="width: 100%; justify-content: center; padding: 0.8rem; font-size: 1rem;">Message</a>
+        </div>
+
+        <div class="about-content">
+            <h1 class="about-heading">About</h1>
+            
+            <p class="about-text">
+                I am an 18-year-old Creative Developer and Entrepreneur based in Mumbai, currently completing my SYJC in Computer Science at Lords Universal College. My journey in technology began with a deep curiosity about how systems communicate—driving me to explore everything from low-level 8085 microprocessor assembly languages to deploying scalable, high-performance cloud architectures.
+            </p>
+
+            <p class="about-text">
+                I believe the best products sit at the intersection of flawless logic and striking aesthetics. That’s why I balance my core software engineering skills with an eye for Graphic Design and Video Editing. Whether I am architecting web hosting infrastructure using cPanel and WHMCS, or designing an intuitive, customer-loved brand identity, I ensure that the user experience feels premium from the first click to the final deployment.
+            </p>
+
+            <p class="about-text">
+                Beyond the screen, I am deeply passionate about hardware and IoT. I have built autonomous robotics and assistive technologies using Arduino and ESP32 microcontrollers, such as a smart, autonomous waste management system and an AI-powered voice assistant. I love bridging the physical and digital worlds to solve genuine, real-world problems.
+            </p>
+
+            <p class="about-text">
+                On the business side, I am the Co-Founder of ZNOir, a sustainable clothing rental startup where I hold a 30% equity stake. We are on a mission to disrupt fast fashion by making high-quality clothing accessible, eco-friendly, and affordable for students and young professionals. I am continuously exploring new frameworks, building the broader Xaltron ecosystem, and seeking out new freelance or collaborative opportunities.
+            </p>
+
+            <h2 class="experience-heading">Experience Includes:</h2>
+            <div class="experience-tags">
+                <span class="tag" style="font-size: 0.85rem; padding: 0.4rem 1rem;">Python</span>
+                <span class="tag" style="font-size: 0.85rem; padding: 0.4rem 1rem;">HTML / CSS / JS</span>
+                <span class="tag" style="font-size: 0.85rem; padding: 0.4rem 1rem;">C++</span>
+                <span class="tag" style="font-size: 0.85rem; padding: 0.4rem 1rem;">Dart / Flutter</span>
+                <span class="tag" style="font-size: 0.85rem; padding: 0.4rem 1rem;">Arduino (Uno/Nano)</span>
+                <span class="tag" style="font-size: 0.85rem; padding: 0.4rem 1rem;">ESP32 / ESP8266</span>
+                <span class="tag" style="font-size: 0.85rem; padding: 0.4rem 1rem;">OpenAI APIs</span>
+                <span class="tag" style="font-size: 0.85rem; padding: 0.4rem 1rem;">WHMCS & cPanel</span>
+                <span class="tag" style="font-size: 0.85rem; padding: 0.4rem 1rem;">DigitalOcean</span>
+                <span class="tag" style="font-size: 0.85rem; padding: 0.4rem 1rem;">WordPress</span>
+                <span class="tag" style="font-size: 0.85rem; padding: 0.4rem 1rem;">Graphic Design</span>
+                <span class="tag" style="font-size: 0.85rem; padding: 0.4rem 1rem;">Video Editing</span>
+                <span class="tag" style="font-size: 0.85rem; padding: 0.4rem 1rem;">Creative Writing</span>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+
+        <div class="footer-cta fade-in">
+            <h2>Let's build something <br><span class="serif-italic">extraordinary.</span></h2>
+            <a href="mailto:om.girkar2@gmail.com" class="big-contact-btn">Say Hello <span>→</span></a>
+        </div>
+
+
+        <div class="footer-bottom fade-in" style="border-top: 1px solid var(--border-color); margin-top: 2rem;">
+            <div class="footer-info">
+                <p>Mumbai, Maharashtra, India 🇮🇳</p>
+                <p>&copy; 2026 Om Girkar. All rights reserved.</p>
+            </div>
+            
+            <div class="footer-links-group">
+                <div class="footer-col">
+                    <span>Socials</span>
+                    <a href="https://www.linkedin.com/in/om-girkar-3a4b341b8/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/omgirkar" target="_blank">GitHub</a>
+                    <a href="#">Instagram</a>
+                </div>
+                <div class="footer-col">
+                    <span>Contact</span>
+                    <a href="mailto:om.girkar2@gmail.com">Email Me</a>
+                    <a href="tel:+917666927074">+91 7666927074</a>
+                    <a href="resume.pdf" target="_blank" style="color: var(--accent-10); font-weight: 500;">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

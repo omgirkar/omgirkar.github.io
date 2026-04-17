@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaia & Smart Dustbin | Om Girkar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-text">Loading Project</div>
+            <div class="loader-percent" id="loader-percent">0%</div>
+        </div>
+        <div class="loader-bar-container">
+            <div class="loader-bar-fill" id="loader-fill"></div>
+        </div>
+    </div>
+
+    <div class="nav-wrapper">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html" class="nav-avatar">OG</a>
+                <div class="nav-links">
+                    <a href="index.html#skills" class="nav-link">Skills</a>
+                    <a href="index.html#work" class="nav-link">Works</a>
+                    <a href="about.html" class="nav-link">About Me</a>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" /></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" /></svg>
+                </button>
+                <a href="mailto:om.girkar2@gmail.com" class="nav-btn">Contact</a>
+                <button class="hamburger" id="hamburger" aria-label="Open Menu"><span></span><span></span><span></span></button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="about.html" class="mobile-menu-link">About Me</a>
+        <a href="index.html#skills" class="mobile-menu-link">Skills</a>
+        <a href="index.html#work" class="mobile-menu-link">Works</a>
+        <a href="mailto:om.girkar2@gmail.com" class="big-contact-btn" style="margin-top: 2rem;">Say Hello <span>→</span></a>
+    </div>
+
+    <div class="case-study-container fade-in" style="margin-top: 10rem;">
+        <a href="index.html#work" class="back-btn">← Back to Portfolio</a>
+        <h1 class="case-title">Avaia & Smart Dustbin</h1>
+        <div class="case-meta">
+            <span class="tag">Python</span>
+            <span class="tag">IoT / ESP32</span>
+            <span class="tag">OpenAI LLM</span>
+            <span class="tag">Flask</span>
+        </div>
+        
+        <div class="case-section">
+            <h2>Project Overview</h2>
+            <p>Avaia is an AI-powered smart robotics project originally designed for a CS exhibition. It combines custom hardware control using an ESP32 microcontroller with a Python Flask backend for advanced AI integration. By leveraging OpenAI's LLMs alongside speech-to-text functionality, the project transcends simple hardware, turning a robotic dustbin into an interactive, voice-controlled entity that can respond to natural language commands, move towards the user, open its lid, and navigate back to a home base.</p>
+        </div>
+        
+        <div class="case-section">
+            <h2>Key Features</h2>
+            <ul class="feature-list">
+                <li><strong>Voice Control Interface:</strong> Interact seamlessly using natural language commands rather than rigid programmed inputs.</li>
+                <li><strong>Autonomous Navigation:</strong> Dual DC motors allow the unit to move towards the user and return to an IR-detected home position.</li>
+                <li><strong>Obstacle Avoidance:</strong> Basic real-time obstacle detection utilizing ultrasonic sensors to prevent collisions.</li>
+                <li><strong>Lid Automation:</strong> Automated lid opening and closing controlled via a servo motor.</li>
+            </ul>
+        </div>
+        
+        <div class="case-section">
+            <h2>Hardware Architecture</h2>
+            <p>The system is built on lightweight, cost-effective components wired together without a breadboard for maximum space efficiency:</p>
+            <ul class="feature-list">
+                <li><strong>ESP32 Development Board:</strong> The core logic controller, handling Wi-Fi networking and sensor communication.</li>
+                <li><strong>L298N Motor Driver:</strong> Manages the voltage and direction for the dual DC motors handling mobility.</li>
+                <li><strong>HC-SR04 Ultrasonic Sensor:</strong> Used for precise distance measurement and obstacle avoidance.</li>
+                <li><strong>MG90S Servo Motor:</strong> Provides the torque needed to smoothly automate the bin's lid.</li>
+            </ul>
+        </div>
+
+        <div class="case-section">
+            <h2>Software Architecture</h2>
+            <p>The backend runs locally on Python 3.8+ utilizing the Flask framework. The server acts as a bridge between the ESP32 and OpenAI's APIs, parsing the user's voice input, making logical decisions based on intent, and firing HTTP commands back to the hardware.</p>
+            <a href="https://github.com/omgirkar/Avaia" target="_blank" class="github-btn" style="background: var(--accent-10); color: var(--bg-60); padding: 0.8rem 1.5rem; border-radius: 100px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 1rem;">View Code on GitHub →</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-cta fade-in">
+            <h2>Let's build something <br><span class="serif-italic">extraordinary.</span></h2>
+            <a href="mailto:om.girkar2@gmail.com" class="big-contact-btn">Say Hello <span>→</span></a>
+        </div>
+
+        <div class="footer-bottom fade-in">
+            <div class="footer-info">
+                <p>Mumbai, Maharashtra, India 🇮🇳</p>
+                <p>&copy; 2026 Om Girkar. All rights reserved.</p>
+            </div>
+            
+            <div class="footer-links-group">
+                <div class="footer-col">
+                    <span>Socials</span>
+                    <a href="https://www.linkedin.com/in/om-girkar-3a4b341b8/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/omgirkar" target="_blank">GitHub</a>
+                    <a href="#">Instagram</a>
+                </div>
+                <div class="footer-col">
+                    <span>Contact</span>
+                    <a href="mailto:om.girkar2@gmail.com">Email Me</a>
+                    <a href="tel:+917666927074">+91 7666927074</a>
+                    <a href="resume.pdf" target="_blank" style="color: var(--accent-10); font-weight: 500;">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -488,7 +488,7 @@ body.show-stickers .st-6 { animation: popBlurFade 6s cubic-bezier(0.25, 1, 0.5, 
 }
 
 /* ==========================================
-   ADDITIONS FOR FOOTER & INTRO
+   ADDITIONS FOR FOOTER & PROJECT LABELS
    ========================================== */
 .footer-cta-title {
     font-size: clamp(2rem, 5vw, 3.5rem);
@@ -496,19 +496,6 @@ body.show-stickers .st-6 { animation: popBlurFade 6s cubic-bezier(0.25, 1, 0.5, 
     margin-bottom: 2rem;
     font-family: var(--font-serif);
     color: var(--text-main);
-}
-
-.intro-section p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    line-height: 1.9;
-    font-weight: 300;
-    margin-bottom: 1.5rem;
-}
-
-.intro-section strong {
-    color: var(--accent-10);
-    font-weight: 500;
 }
 
 .project-label {

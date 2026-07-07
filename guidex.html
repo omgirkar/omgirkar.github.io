@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GuideX - Automatic Blind Stick | Om Girkar</title>
-    <meta name="description" content="GuideX is an assistive smart blind stick using ultrasonic sensors and haptic feedback to help visually impaired individuals navigate safely.">
+    <title>GuideX - Automatic Blind Stick for Visually Impaired | Om Girkar</title>
+    <meta name="description" content="GuideX is an automatic blind stick using ultrasonic sensors and haptic feedback to help visually impaired individuals navigate safely.">
+    <meta name="keywords" content="GuideX, automatic blind stick, assistive device for blind, visually impaired, ultrasonic stick, Arduino Nano, haptic feedback, C++, assistive technology">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://omgirkar.me/guidex.html" />
 
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- HSTS -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    </noscript>
+
     <link rel="stylesheet" href="style.css">
     <script>
         const savedTheme = localStorage.getItem('theme') || 'dark';
@@ -34,7 +45,7 @@
     <div class="nav-wrapper">
         <nav class="navbar">
             <div class="nav-left">
-                <a href="/" class="nav-avatar">OG</a>
+                <a href="/" class="nav-avatar" aria-label="Home">OG</a>
                 <div class="nav-links">
                     <a href="index.html#skills" class="nav-link">Skills</a>
                     <a href="index.html#work" class="nav-link">Works</a>
@@ -97,13 +108,13 @@
         <div class="case-section">
             <h2>The Code & Logic</h2>
             <p>Written in C++, the logic evaluates the `distanceThreshold` variables in real-time. If the time-of-flight from the ultrasonic ping calculates a distance that falls below the safe parameter, it instantly activates the high-pin output for the buzzer.</p>
-            <a href="https://github.com/omgirkar/GuideX" target="_blank" class="github-btn" style="background: var(--accent-10); color: var(--bg-60); padding: 0.8rem 1.5rem; border-radius: 100px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 1rem;">View Code on GitHub →</a>
+            <a href="https://github.com/omgirkar/GuideX" target="_blank" rel="noopener noreferrer" class="github-btn" style="background: var(--accent-10); color: var(--bg-60); padding: 0.8rem 1.5rem; border-radius: 100px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 1rem;">View Code on GitHub →</a>
         </div>
     </div>
 
     <footer class="footer">
         <div class="footer-cta fade-in">
-            <h2>Let's build something <br><span class="serif-italic">extraordinary.</span></h2>
+            <p class="footer-cta-title">Let's build something <br><span class="serif-italic">extraordinary.</span></p>
             <a href="mailto:om.girkar2@gmail.com" class="big-contact-btn">Say Hello <span>→</span></a>
         </div>
 
@@ -116,15 +127,15 @@
             <div class="footer-links-group">
                 <div class="footer-col">
                     <span>Socials</span>
-                    <a href="https://www.linkedin.com/in/om-girkar" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/omgirkar" target="_blank">GitHub</a>
-                    <a href="#">Instagram</a>
+                    <a href="https://www.linkedin.com/in/om-girkar" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/omgirkar" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
                 </div>
                 <div class="footer-col">
                     <span>Contact</span>
                     <a href="mailto:om.girkar2@gmail.com">Email Me</a>
                     <a href="tel:+917666927074">+91 7666927074</a>
-                    <a href="resume.pdf" target="_blank" style="color: var(--accent-10); font-weight: 500;">Download Resume</a>
+                    <a href="resume.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--accent-10); font-weight: 500;">Download Resume</a>
                 </div>
             </div>
         </div>

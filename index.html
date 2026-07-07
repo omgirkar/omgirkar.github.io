@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Om Girkar | Developer, Founder & Creator</title>
     <meta name="description" content="Official portfolio of Om Girkar, a developer, IoT enthusiast, and Co-founder of ZNOir from Mumbai. Explore projects in AI, robotics, and web architecture.">
-    <meta name="keywords" content="Om Girkar, Om Girkar Mumbai, Om Girkar portfolio, ZNOir founder, Avaia AI, developer Mumbai, IoT robotics">
+    <meta name="keywords" content="Om Girkar, developer, Python, Arduino, ESP32, IoT, robotics, AI, web development, Mumbai, ZNOir, Avaia, GuideX, automatic blind stick, smart dustbin">
     <meta name="author" content="Om Girkar">
 
-    <!-- Canonical URL – prefer root -->
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://omgirkar.me/" />
+
+    <!-- Apple Touch Icon (create a 180x180 PNG) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- HSTS workaround (meta tag) -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -20,7 +26,7 @@
     <meta property="twitter:title" content="Om Girkar | Developer, Founder & Creator">
     <meta property="twitter:description" content="Portfolio of Om Girkar. Explore projects in AI, robotics, and web architecture.">
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSKH56NP66"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -29,6 +35,7 @@
       gtag('config', 'G-YSKH56NP66');
     </script>
 
+    <!-- JSON-LD -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,9 +61,14 @@
 }
 </script>
 
+    <!-- Preconnect & Fonts (non-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    </noscript>
+
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
@@ -75,14 +87,13 @@
     <div class="nav-wrapper">
         <nav class="navbar">
             <div class="nav-left">
-                <a href="/" class="nav-avatar">OG</a>
+                <a href="/" class="nav-avatar" aria-label="Home">OG</a>
                 <div class="nav-links">
                     <a href="#skills" class="nav-link">Skills</a>
                     <a href="#work" class="nav-link">Works</a>
                     <a href="about.html" class="nav-link">About Me</a>
                 </div>
             </div>
-            
             <div class="nav-actions">
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
                     <svg class="icon-sun" viewBox="0 0 24 24"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" /></svg>
@@ -122,10 +133,26 @@
                 <span class="blur-text serif-italic" style="--delay: 0.6s">Ecosystems</span>
             </h1>
             <p class="hero-desc blur-text" style="--delay: 0.8s">
-                I'm an 18 year old developer and founder from Mumbai. Whether it's training AI voice assistants, building IoT robotics, or scaling web hosting infrastructure, I design systems that solve real problems.
+                I'm an 18-year-old developer and founder from Mumbai. Whether it's training AI voice assistants, building IoT robotics, or scaling web hosting infrastructure, I design systems that solve real problems.
             </p>
         </div>
     </header>
+
+    <!-- Expanded Introduction for word count & keywords -->
+    <section class="section-container intro-section fade-in" style="padding-top: 2rem; max-width: 850px;">
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.9; font-weight: 300; margin-bottom: 1.5rem;">
+            I am a developer who loves building things at the intersection of software, hardware, and artificial intelligence. My journey started with tinkering on <strong>Arduino</strong> microcontrollers and quickly evolved into creating full‑stack applications, voice‑controlled robotics, and sustainable tech startups. I work primarily with <strong>Python</strong> and modern web technologies (<strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>), and I frequently integrate hardware like <strong>ESP32</strong> and various sensors into my projects.
+        </p>
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.9; font-weight: 300; margin-bottom: 1.5rem;">
+            One of my flagship projects, <strong>Avaia</strong>, is an AI-powered voice assistant that understands natural speech and controls a smart dustbin using an ESP32. It combines <strong>OpenAI's LLMs</strong>, Whisper for speech-to-text, and a Flask backend to create a truly interactive robotic experience. Another project, <strong>GuideX</strong>, is an automatic blind stick that uses ultrasonic sensors and haptic feedback to help visually impaired individuals navigate safely – a practical, cost-effective assistive device built with an Arduino Nano and C++.
+        </p>
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.9; font-weight: 300; margin-bottom: 1.5rem;">
+            On the business side, I am the Co‑Founder of <strong>ZNOir</strong>, a sustainable clothing rental startup that aims to reduce fast‑fashion waste. I handle the technical architecture, branding, and team management, and I hold a 30% equity stake. I also have hands‑on experience with <strong>WHMCS</strong>, cPanel, DigitalOcean, and WordPress from managing web hosting solutions and freelance projects.
+        </p>
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.9; font-weight: 300;">
+            I am constantly exploring new technologies, expanding the Xaltron ecosystem, and looking for collaborative opportunities where I can apply my skills in <strong>robotics</strong>, AI, and web development to create meaningful, real‑world impact.
+        </p>
+    </section>
 
     <div class="marquee-section fade-in">
         <div class="marquee-track">
@@ -186,7 +213,6 @@
                     <li><span>WHMCS & cPanel</span> <span class="skill-level">Intermediate</span></li>
                     <li><span>WordPress</span> <span class="skill-level">Intermediate</span></li>
                     <li><span>SEO</span> <span class="skill-level">Basics</span></li>
-                    
                 </ul>
             </div>
         </div>
@@ -203,7 +229,7 @@
         <div class="project-grid">
             <a href="#" class="project-card fade-in">
                 <h3 class="project-inner-title">ZNOir</h3>
-                <h5>Work in progress</h5>
+                <h5 class="project-label">Sustainable Fashion Startup</h5>
                 <p class="project-inner-desc">Sustainable Clothing Rental Startup
                     <br> Co-founded a clothing rental platform addressing fast-fashion waste. Focus on accessible fashion with scalable subscription models and pay-per-rental access.
                 </p>
@@ -211,24 +237,26 @@
                     <span class="tag">Co-Founder</span>
                     <span class="tag">Web Architecture</span>
                     <span class="tag">Team Management</span>
-                    
                 </div>
             </a>
-            <a href="avaia.html"class="project-card fade-in">
+
+            <a href="avaia.html" class="project-card fade-in">
                 <h3 class="project-inner-title">Avaia</h3>
-                <h5>Click to View</h5>
-                <p class="project-inner-desc">Advanced AI Voice Assistant
+                <h5 class="project-label">AI Voice Assistant & Smart Dustbin</h5>
+                <p class="project-inner-desc">Advanced AI Voice Assistant & Smart Dustbin
                     <br>
-                    Built a highly responsive voice assistant integrating Whisper AI and LLM architecture to create a fluid, context-aware human-like conversational experience.
+                    Built a highly responsive voice assistant integrating Whisper AI and LLM architecture to create a fluid, context-aware conversational experience, paired with an autonomous ESP32‑controlled dustbin.
                 </p>
                 <div class="project-tags">
                     <span class="tag">Python</span>
                     <span class="tag">Whisper AI</span>
+                    <span class="tag">ESP32</span>
                 </div>
             </a>
+
             <a href="avaia.html" class="project-card fade-in">
                 <h3 class="project-inner-title">Smart Dustbin</h3>
-                <h5>Click to View</h5>
+                <h5 class="project-label">Autonomous Waste Management</h5>
                 <p class="project-inner-desc">Autonomous Waste Management Robotics
                     <br>
                     An IoT robotics project utilizing sensors and microcontrollers to create an intelligent, self-opening dustbin to improve hygiene and automation.
@@ -238,18 +266,18 @@
                     <span class="tag">ESP32</span>
                 </div>
             </a>
+
             <a href="guidex.html" class="project-card fade-in">
                 <h3 class="project-inner-title">GuideX</h3>
-                <h5>Click to View</h5>
+                <h5 class="project-label">Automatic Blind Stick</h5>
                 <p class="project-inner-desc">An assistive device for visually impaired individuals
                     <br>
-                    Developed an blind stick with ultrasonic sensors and haptic feedback to enhance navigation and safety.
+                    Developed an automatic blind stick with ultrasonic sensors and haptic feedback to enhance navigation and safety for the visually impaired.
                 </p>
                 <div class="project-tags">
                     <span class="tag">Arduino</span>
                     <span class="tag">Sensors</span>
                     <span class="tag">Haptic Feedback</span>
-
                 </div>
             </a>
         </div>
@@ -257,7 +285,7 @@
 
     <footer class="footer">
         <div class="footer-cta fade-in">
-            <h2>Let's build something <br><span class="serif-italic">extraordinary.</span></h2>
+            <p class="footer-cta-title">Let's build something <br><span class="serif-italic">extraordinary.</span></p>
             <a href="mailto:om.girkar2@gmail.com" class="big-contact-btn">Say Hello <span>→</span></a>
         </div>
 
@@ -270,15 +298,15 @@
             <div class="footer-links-group">
                 <div class="footer-col">
                     <span>Socials</span>
-                    <a href="https://www.linkedin.com/in/om-girkar" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/omgirkar" target="_blank">GitHub</a>
-                    <a href="#" >Instagram</a>
+                    <a href="https://www.linkedin.com/in/om-girkar" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/omgirkar" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
                 </div>
                 <div class="footer-col">
                     <span>Contact</span>
                     <a href="mailto:om.girkar2@gmail.com">Email Me</a>
                     <a href="tel:+917666927074">+91 7666927074</a>
-                    <a href="resume.pdf" target="_blank" style="color: var(--accent-10); font-weight: 500;">Download Resume</a>
+                    <a href="resume.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--accent-10); font-weight: 500;">Download Resume</a>
                 </div>
             </div>
         </div>

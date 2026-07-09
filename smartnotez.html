@@ -234,24 +234,17 @@
 
         <div class="case-section fade-in">
     <h2>How It Works</h2>
-    <div style="background: var(--bg-30); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); overflow-x: auto; -webkit-overflow-scrolling: touch;">
-        <pre style="font-family: monospace; color: var(--text-muted); margin: 0; white-space: pre-wrap; word-break: break-word; overflow-wrap: break-word; font-size: 0.9rem; line-height: 1.8;">
-Student logs in (Supabase auth)
-         ↓
-Uploads PDF/TXT/MD notes
-         ↓
-Browser extracts text (PDF.js or FileReader)
-         ↓
-Frontend sends text to Express backend
-         ↓
-Backend sends structured prompt to Gemini/Groq
-         ↓
-Gemini returns clean JSON questions
-         ↓
-Frontend renders timed quiz
-         ↓
-Results + accuracy saved in Supabase
-        </pre>
+    <div style="background: var(--bg-30); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color);">
+        <ol style="color: var(--text-muted); line-height: 2; margin: 0; padding-left: 1.5rem; font-size: 0.95rem;">
+            <li><strong style="color: var(--text-main);">Student logs in</strong> — Supabase authentication</li>
+            <li><strong style="color: var(--text-main);">Uploads notes</strong> — PDF, TXT, or MD files</li>
+            <li><strong style="color: var(--text-main);">Browser extracts text</strong> — PDF.js or FileReader</li>
+            <li><strong style="color: var(--text-main);">Frontend sends text</strong> — to Express backend</li>
+            <li><strong style="color: var(--text-main);">Backend prompts AI</strong> — structured prompt to Gemini/Groq</li>
+            <li><strong style="color: var(--text-main);">Gemini returns questions</strong> — clean JSON data</li>
+            <li><strong style="color: var(--text-main);">Frontend renders quiz</strong> — timed test interface</li>
+            <li><strong style="color: var(--text-main);">Results saved</strong> — accuracy stored in Supabase</li>
+        </ol>
     </div>
 </div>
 

@@ -233,25 +233,27 @@
         </div>
 
         <div class="case-section fade-in">
-            <h2>How It Works</h2>
-            <p style="font-family: monospace; background: var(--bg-30); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); white-space: pre-wrap; color: var(--text-muted);">
-                Student logs in (Supabase auth)
-                         ↓
-                Uploads PDF/TXT/MD notes
-                         ↓
-                Browser extracts text (PDF.js or FileReader)
-                         ↓
-                Frontend sends text to Express backend
-                         ↓
-                Backend sends structured prompt to Gemini/Groq
-                         ↓
-                Gemini returns clean JSON questions
-                         ↓
-                Frontend renders timed quiz
-                         ↓
-                Results + accuracy saved in Supabase
-            </p>
-        </div>
+    <h2>How It Works</h2>
+    <div style="background: var(--bg-30); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); overflow-x: auto; -webkit-overflow-scrolling: touch;">
+        <pre style="font-family: monospace; color: var(--text-muted); margin: 0; white-space: pre-wrap; word-break: break-word; overflow-wrap: break-word; font-size: 0.9rem; line-height: 1.8;">
+Student logs in (Supabase auth)
+         ↓
+Uploads PDF/TXT/MD notes
+         ↓
+Browser extracts text (PDF.js or FileReader)
+         ↓
+Frontend sends text to Express backend
+         ↓
+Backend sends structured prompt to Gemini/Groq
+         ↓
+Gemini returns clean JSON questions
+         ↓
+Frontend renders timed quiz
+         ↓
+Results + accuracy saved in Supabase
+        </pre>
+    </div>
+</div>
 
         <div class="case-section fade-in">
             <h2>Key Features</h2>

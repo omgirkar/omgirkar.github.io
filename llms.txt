@@ -12,24 +12,27 @@ Site: Om Girkar's Portfolio
 URL: https://omgirkar.me/
 Owner: Om Girkar
 Location: Mumbai, Maharashtra, India
-Description: Personal portfolio of Om Girkar, an 19-year-old Creative Developer, Co-founder of ZNOir, and IoT/AI enthusiast. Showcases projects, skills, and professional background.
+Description: Personal portfolio of Om Girkar, a 19-year-old Creative Developer, Co-founder of ZNOir, and IoT/AI enthusiast. Showcases projects, skills, case studies, and professional background.
 
 # Key Projects
 - Avaia (AI Voice Assistant & Smart Dustbin): Python, OpenAI APIs, ESP32, Flask.
 - GuideX (Assistive Blind Stick): Arduino Nano, Ultrasonic Sensors, C++.
+- SmartNoteZ (AI-Powered Quiz Generator): Node.js, Supabase, Gemini API, PDF.js.
 - ZNOir (Sustainable Fashion Rental Startup): Co-founder, Web Architecture, Team Management.
 
 # Technology Stack
 Languages: Python, HTML/CSS/JS, Dart/Flutter, C++
 Hardware: Arduino, ESP32/ESP8266, Sensors, Motors
 Infrastructure: WHMCS, cPanel, DigitalOcean, WordPress
-AI/ML: OpenAI APIs, Whisper STT/TTS
+AI/ML: OpenAI APIs, Whisper STT/TTS, Gemini API
 
 # Core Pages
 - Home: https://omgirkar.me/
 - About: https://omgirkar.me/about.html
 - Avaia Project: https://omgirkar.me/avaia.html
 - GuideX Project: https://omgirkar.me/guidex.html
+- SmartNoteZ Project: https://omgirkar.me/smartnotez.html
+- Case Studies: https://omgirkar.me/case-studies.html
 - Resume: https://omgirkar.me/resume.pdf
 
 # Contact

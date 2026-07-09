@@ -45,7 +45,26 @@
 
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Additional styling for the screenshot grid */
+        /* Mobile-friendly adjustments for this page */
+        .smartnotez-container {
+            max-width: 850px;
+            margin: 8rem auto 6rem;
+            padding: 0 2rem;
+        }
+        @media (max-width: 768px) {
+            .smartnotez-container {
+                margin-top: 6rem; /* reduced for mobile */
+                padding: 0 1rem;
+            }
+            .screenshot-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1rem;
+            }
+            .screenshot-grid figure {
+                max-width: 100%;
+            }
+        }
+
         .screenshot-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -81,12 +100,6 @@
         .screenshot-grid figcaption strong {
             color: var(--text-main);
             font-weight: 500;
-        }
-        @media (max-width: 768px) {
-            .screenshot-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
         }
     </style>
 
@@ -138,20 +151,24 @@
         <a href="mailto:om.girkar2@gmail.com" class="big-contact-btn" style="margin-top: 2rem;">Say Hello →</a>
     </div>
 
-    <div class="case-study-container fade-in" style="margin-top: 10rem;">
+    <!-- MAIN CONTAINER – no fade-in class here to ensure visibility on mobile -->
+    <div class="smartnotez-container">
         <a href="index.html#work" class="back-btn">← Back to Portfolio</a>
-        <h1 class="case-title">SmartNoteZ</h1>
-        <div class="case-meta">
-            <span class="tag">AI</span>
-            <span class="tag">EdTech</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">Supabase</span>
-            <span class="tag">Gemini API</span>
-            <span class="tag">PDF.js</span>
+
+        <div class="fade-in">
+            <h1 class="case-title">SmartNoteZ</h1>
+            <div class="case-meta">
+                <span class="tag">AI</span>
+                <span class="tag">EdTech</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Supabase</span>
+                <span class="tag">Gemini API</span>
+                <span class="tag">PDF.js</span>
+            </div>
         </div>
 
         <!-- UI Screenshots Gallery -->
-        <div class="case-section">
+        <div class="case-section fade-in">
             <h2>UI Walkthrough</h2>
             <p>Here is a visual tour of the SmartNoteZ experience — from uploading notes to viewing results.</p>
 
@@ -179,19 +196,19 @@
             </div>
         </div>
 
-        <div class="case-section">
+        <div class="case-section fade-in">
             <h2>Overview</h2>
             <p>SmartNoteZ is a calm, aesthetic portfolio project that transforms how students study. By combining note-taking with AI-powered quiz generation, it helps students upload their study materials and automatically generate timed tests to assess their understanding.</p>
             <p>The project was built as a full-stack web application with a focus on clean design, practical utility, and real-world learning outcomes.</p>
             <p><strong>Live Demo:</strong> <a href="https://smartnotez.vercel.app/" target="_blank" style="color: var(--accent-10);">smartnotez.vercel.app</a></p>
         </div>
 
-        <div class="case-section">
+        <div class="case-section fade-in">
             <h2>The Problem</h2>
             <p>Students often spend hours creating practice questions from their notes—a time-consuming process that takes away from actual studying. Many note-taking apps store information but don't help students test their knowledge. The gap between <em>taking notes</em> and <em>retaining information</em> needed a bridge.</p>
         </div>
 
-        <div class="case-section">
+        <div class="case-section fade-in">
             <h2>The Solution</h2>
             <p>SmartNoteZ solves this by letting students:</p>
             <ul class="feature-list">
@@ -203,7 +220,7 @@
             <p>The result is a seamless workflow from notes → quiz → feedback, all in one clean interface.</p>
         </div>
 
-        <div class="case-section">
+        <div class="case-section fade-in">
             <h2>Tech Stack</h2>
             <ul class="feature-list">
                 <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
@@ -215,7 +232,7 @@
             </ul>
         </div>
 
-        <div class="case-section">
+        <div class="case-section fade-in">
             <h2>How It Works</h2>
             <p style="font-family: monospace; background: var(--bg-30); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); white-space: pre-wrap; color: var(--text-muted);">
                 Student logs in (Supabase auth)
@@ -236,7 +253,7 @@
             </p>
         </div>
 
-        <div class="case-section">
+        <div class="case-section fade-in">
             <h2>Key Features</h2>
             <ul class="feature-list">
                 <li><strong>Student Authentication:</strong> Secure login powered by Supabase—no quiz generation without an account.</li>
@@ -247,7 +264,7 @@
             </ul>
         </div>
 
-        <div class="case-section">
+        <div class="case-section fade-in">
             <h2>Cost Optimization Strategy</h2>
             <p>SmartNoteZ is designed with free-tier users in mind:</p>
             <ul class="feature-list">
@@ -259,7 +276,7 @@
             <p>⚠️ <em>Note: Gemini and Supabase free-tier limits can change—always check dashboards before deploying publicly.</em></p>
         </div>
 
-        <div class="case-section">
+        <div class="case-section fade-in">
             <h2>Setup Overview</h2>
             <ol style="color: var(--text-muted); line-height: 1.8; margin-left: 1.5rem;">
                 <li>Create a Supabase project — copy Project URL and anon public key, run <code>database/schema.sql</code></li>
@@ -269,7 +286,7 @@
             </ol>
         </div>
 
-        <div class="case-section">
+        <div class="case-section fade-in">
             <h2>What Makes SmartNoteZ Stand Out</h2>
             <ul class="feature-list">
                 <li><strong>Aesthetic design</strong> — calm, student-friendly interface</li>
@@ -315,4 +332,4 @@
     </footer>
 
 </body>
-</html>
+                </html>

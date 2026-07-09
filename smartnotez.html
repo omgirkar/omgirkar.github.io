@@ -1,1 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartNoteZ – AI-Powered Student Quiz Generator | Om Girkar</title>
+    <meta name="description" content="SmartNoteZ is an AI-powered quiz generator that converts student notes (PDF, TXT, MD) into timed tests using Node.js, Supabase, and the Gemini API.">
+    <meta name="keywords" content="SmartNoteZ, AI quiz generator, EdTech, Node.js, Supabase, Gemini API, PDF.js, student notes, timed tests, full-stack, Om Girkar">
+    <meta name="author" content="Om Girkar">
 
+    <link rel="canonical" href="https://omgirkar.me/smartnotez.html" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://omgirkar.me/smartnotez.html">
+    <meta property="og:title" content="SmartNoteZ – AI-Powered Student Quiz Generator">
+    <meta property="og:description" content="Convert notes into timed quizzes with AI. Built with Node.js, Supabase, and Gemini API.">
+    <meta property="twitter:url" content="https://omgirkar.me/smartnotez.html">
+    <meta property="twitter:title" content="SmartNoteZ – AI-Powered Student Quiz Generator">
+    <meta property="twitter:description" content="Convert notes into timed quizzes with AI. Built with Node.js, Supabase, and Gemini API.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SmartNoteZ",
+      "applicationCategory": "Educational Application",
+      "operatingSystem": "Web",
+      "description": "AI-powered quiz generator that converts student notes into timed tests.",
+      "url": "https://smartnotez.vercel.app/",
+      "author": {
+        "@type": "Person",
+        "name": "Om Girkar"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    </noscript>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styling for the screenshot grid */
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .screenshot-grid figure {
+            margin: 0;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            background: var(--bg-30);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .screenshot-grid figure:hover {
+            transform: translateY(-4px);
+        }
+        .screenshot-grid img {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: #fff;
+        }
+        .screenshot-grid figcaption {
+            padding: 0.8rem 1.2rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background: var(--bg-30);
+            border-top: 1px solid var(--border-color);
+            font-weight: 300;
+            text-align: center;
+        }
+        .screenshot-grid figcaption strong {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+        @media (max-width: 768px) {
+            .screenshot-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+    </style>
+
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-text">Loading Project</div>
+            <div class="loader-percent" id="loader-percent">0%</div>
+        </div>
+        <div class="loader-bar-container">
+            <div class="loader-bar-fill" id="loader-fill"></div>
+        </div>
+    </div>
+
+    <div class="nav-wrapper">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="/" class="nav-avatar" aria-label="Home">OG</a>
+                <div class="nav-links">
+                    <a href="index.html#skills" class="nav-link">Skills</a>
+                    <a href="index.html#work" class="nav-link">Works</a>
+                    <a href="about.html" class="nav-link">About Me</a>
+                    <a href="case-studies.html" class="nav-link">Case Studies</a>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" /></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24"><path d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" /></svg>
+                </button>
+                <a href="mailto:om.girkar2@gmail.com" class="nav-btn">Contact</a>
+                <button class="hamburger" id="hamburger" aria-label="Open Menu"><span></span><span></span><span></span></button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="about.html" class="mobile-menu-link">About Me</a>
+        <a href="index.html#skills" class="mobile-menu-link">Skills</a>
+        <a href="index.html#work" class="mobile-menu-link">Works</a>
+        <a href="case-studies.html" class="mobile-menu-link">Case Studies</a>
+        <a href="mailto:om.girkar2@gmail.com" class="big-contact-btn" style="margin-top: 2rem;">Say Hello →</a>
+    </div>
+
+    <div class="case-study-container fade-in" style="margin-top: 10rem;">
+        <a href="index.html#work" class="back-btn">← Back to Portfolio</a>
+        <h1 class="case-title">SmartNoteZ</h1>
+        <div class="case-meta">
+            <span class="tag">AI</span>
+            <span class="tag">EdTech</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Supabase</span>
+            <span class="tag">Gemini API</span>
+            <span class="tag">PDF.js</span>
+        </div>
+
+        <!-- UI Screenshots Gallery -->
+        <div class="case-section">
+            <h2>UI Walkthrough</h2>
+            <p>Here is a visual tour of the SmartNoteZ experience — from uploading notes to viewing results.</p>
+
+            <div class="screenshot-grid">
+                <figure>
+                    <img src="assets/img/smartnotez/dashboard.png" alt="SmartNoteZ student dashboard showing upload section and stats">
+                    <figcaption><strong>Student Dashboard</strong> — Upload notes, track attempts, and view best accuracy.</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/smartnotez/upload-notes.png" alt="Step 01: Adding study material with extracted text preview">
+                    <figcaption><strong>Step 01: Add Study Material</strong> — Upload PDF, TXT, or MD. Text is extracted in the browser.</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/smartnotez/quiz-interface.png" alt="Step 02: Timed quiz interface showing questions and options">
+                    <figcaption><strong>Step 02: Timed Quiz</strong> — AI-generated questions appear with a countdown timer.</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/img/smartnotez/results.png" alt="Step 03: Quiz results showing accuracy and correct/incorrect breakdown">
+                    <figcaption><strong>Step 03: Results & Accuracy</strong> — See your score, review correct answers, and track history.</figcaption>
+                </figure>
+                <figure style="grid-column: 1 / -1; max-width: 600px; justify-self: center; width: 100%;">
+                    <img src="assets/img/smartnotez/auth-email.png" alt="Supabase confirmation email for authentication">
+                    <figcaption><strong>Authentication Flow</strong> — Secure sign-up powered by Supabase (email confirmation).</figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="case-section">
+            <h2>Overview</h2>
+            <p>SmartNoteZ is a calm, aesthetic portfolio project that transforms how students study. By combining note-taking with AI-powered quiz generation, it helps students upload their study materials and automatically generate timed tests to assess their understanding.</p>
+            <p>The project was built as a full-stack web application with a focus on clean design, practical utility, and real-world learning outcomes.</p>
+            <p><strong>Live Demo:</strong> <a href="https://smartnotez.vercel.app/" target="_blank" style="color: var(--accent-10);">smartnotez.vercel.app</a></p>
+        </div>
+
+        <div class="case-section">
+            <h2>The Problem</h2>
+            <p>Students often spend hours creating practice questions from their notes—a time-consuming process that takes away from actual studying. Many note-taking apps store information but don't help students test their knowledge. The gap between <em>taking notes</em> and <em>retaining information</em> needed a bridge.</p>
+        </div>
+
+        <div class="case-section">
+            <h2>The Solution</h2>
+            <p>SmartNoteZ solves this by letting students:</p>
+            <ul class="feature-list">
+                <li><strong>Upload notes</strong> in PDF, TXT, or Markdown format</li>
+                <li><strong>Extract text automatically</strong> using PDF.js and FileReader</li>
+                <li><strong>Generate timed quizzes</strong> via AI (Gemini or Groq APIs)</li>
+                <li><strong>Attempt tests</strong> and immediately view scores with accuracy metrics</li>
+            </ul>
+            <p>The result is a seamless workflow from notes → quiz → feedback, all in one clean interface.</p>
+        </div>
+
+        <div class="case-section">
+            <h2>Tech Stack</h2>
+            <ul class="feature-list">
+                <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
+                <li><strong>Backend:</strong> Node.js + Express</li>
+                <li><strong>Auth + Database:</strong> Supabase</li>
+                <li><strong>AI Integration:</strong> Gemini API / Groq API</li>
+                <li><strong>PDF Processing:</strong> PDF.js (browser-side)</li>
+                <li><strong>Data Visualization:</strong> Chart.js</li>
+            </ul>
+        </div>
+
+        <div class="case-section">
+            <h2>How It Works</h2>
+            <p style="font-family: monospace; background: var(--bg-30); padding: 1.5rem; border-radius: 12px; border: 1px solid var(--border-color); white-space: pre-wrap; color: var(--text-muted);">
+                Student logs in (Supabase auth)
+                         ↓
+                Uploads PDF/TXT/MD notes
+                         ↓
+                Browser extracts text (PDF.js or FileReader)
+                         ↓
+                Frontend sends text to Express backend
+                         ↓
+                Backend sends structured prompt to Gemini/Groq
+                         ↓
+                Gemini returns clean JSON questions
+                         ↓
+                Frontend renders timed quiz
+                         ↓
+                Results + accuracy saved in Supabase
+            </p>
+        </div>
+
+        <div class="case-section">
+            <h2>Key Features</h2>
+            <ul class="feature-list">
+                <li><strong>Student Authentication:</strong> Secure login powered by Supabase—no quiz generation without an account.</li>
+                <li><strong>Multi-Format Note Upload:</strong> Supports <code>.pdf</code>, <code>.txt</code>, and <code>.md</code> files.</li>
+                <li><strong>AI-Generated Quizzes:</strong> The backend sends structured prompts to Gemini or Groq, receiving clean JSON question data.</li>
+                <li><strong>Timed Testing:</strong> Students attempt quizzes under timed conditions, simulating real exam pressure.</li>
+                <li><strong>Performance Tracking:</strong> Scores and accuracy are saved, with Chart.js visualizing results.</li>
+            </ul>
+        </div>
+
+        <div class="case-section">
+            <h2>Cost Optimization Strategy</h2>
+            <p>SmartNoteZ is designed with free-tier users in mind:</p>
+            <ul class="feature-list">
+                <li>Uses <strong>Groq's llama-3.1-8b-instant</strong> models for low-cost/free-tier friendly usage</li>
+                <li>Limits extracted notes to <strong>~12,000 characters</strong> in the frontend</li>
+                <li>Generates <strong>5–10 questions</strong> per quiz to start</li>
+                <li>Restricts quiz generation to <strong>logged-in users only</strong></li>
+            </ul>
+            <p>⚠️ <em>Note: Gemini and Supabase free-tier limits can change—always check dashboards before deploying publicly.</em></p>
+        </div>
+
+        <div class="case-section">
+            <h2>Setup Overview</h2>
+            <ol style="color: var(--text-muted); line-height: 1.8; margin-left: 1.5rem;">
+                <li>Create a Supabase project — copy Project URL and anon public key, run <code>database/schema.sql</code></li>
+                <li>Configure frontend — add Supabase details to <code>frontend/js/config.js</code></li>
+                <li>Set up backend — configure <code>.env</code> with GROQ_API_KEY and Supabase credentials</li>
+                <li>Run the project — <code>npm install && npm run dev</code> from root, or run backend and frontend separately</li>
+            </ol>
+        </div>
+
+        <div class="case-section">
+            <h2>What Makes SmartNoteZ Stand Out</h2>
+            <ul class="feature-list">
+                <li><strong>Aesthetic design</strong> — calm, student-friendly interface</li>
+                <li><strong>Practical utility</strong> — solves a real student pain point</li>
+                <li><strong>AI-native</strong> — leverages modern LLMs for content generation</li>
+                <li><strong>Cost-conscious</strong> — optimized for free tiers</li>
+                <li><strong>Full-stack showcase</strong> — demonstrates frontend, backend, auth, and AI integration skills</li>
+            </ul>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
+            <a href="https://github.com/omgirkar/SmartNoteZ" target="_blank" rel="noopener noreferrer" class="github-btn" style="background: var(--accent-10); color: var(--bg-60); padding: 0.8rem 1.5rem; border-radius: 100px; text-decoration: none; font-weight: 600;">View on GitHub →</a>
+            <a href="https://smartnotez.vercel.app/" target="_blank" rel="noopener noreferrer" class="github-btn" style="background: transparent; color: var(--text-main); border: 1px solid var(--border-color); padding: 0.8rem 1.5rem; border-radius: 100px; text-decoration: none; font-weight: 500;">Live Demo →</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-cta fade-in">
+            <p class="footer-cta-title">Let's build something <br><span class="serif-italic">extraordinary.</span></p>
+            <a href="mailto:om.girkar2@gmail.com" class="big-contact-btn">Say Hello →</a>
+        </div>
+
+        <div class="footer-bottom fade-in">
+            <div class="footer-info">
+                <p>Mumbai, Maharashtra, India 🇮🇳</p>
+                <p>&copy; 2026 Om Girkar. All rights reserved.</p>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-col">
+                    <span>Socials</span>
+                    <a href="https://www.linkedin.com/in/om-girkar" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/omgirkar" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+                </div>
+                <div class="footer-col">
+                    <span>Contact</span>
+                    <a href="mailto:om.girkar2@gmail.com">Email Me</a>
+                    <a href="tel:+917666927074">+91 7666927074</a>
+                    <a href="resume.pdf" target="_blank" rel="noopener noreferrer" style="color: var(--accent-10); font-weight: 500;">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

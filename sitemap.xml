@@ -2,19 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://omgirkar.me/</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-08-03</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://omgirkar.me/about.html</loc>
-    <priority>0.80</priority>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://omgirkar.me/avaia.html</loc>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://omgirkar.me/guidex.html</loc>
+    <lastmod>2026-08-03</lastmod>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://omgirkar.me/smartnotez.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://omgirkar.me/portfolio-build.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://omgirkar.me/case-studies.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://omgirkar.me/resume.pdf</loc>
+    <lastmod>2026-08-03</lastmod>
+    <priority>0.50</priority>
   </url>
 </urlset>

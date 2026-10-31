@@ -3,38 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartNoteZ – AI-Powered Student Quiz Generator | Om Girkar EdTech</title>
-    <meta name="description" content="SmartNoteZ is an AI-powered quiz generator that converts student notes (PDF, TXT, MD) into timed tests using Node.js, Supabase, and the Gemini API. A standout EdTech project in Om Girkar's developer portfolio.">
-    <meta name="keywords" content="SmartNoteZ, AI quiz generator, EdTech, Node.js, Supabase, Gemini API, PDF.js, student notes, timed tests, full-stack, Om Girkar, girkar, best developer portfolio">
+    <title>SmartNoteZ – AI Quiz Generator for Student Notes | Om Girkar</title>
+    <meta name="description" content="SmartNoteZ is an AI-powered quiz generator that converts student notes (PDF, TXT, MD) into timed tests using Node.js, Supabase, and the Gemini API.">
     <meta name="author" content="Om Girkar">
 
-    <link rel="canonical" href="https://omgirkar.me/smartnotez.html" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <link rel="canonical" href="https://omgirkar.me/smartnotez" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <meta property="og:image" content="https://omgirkar.me/assets/icons/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://omgirkar.me/assets/icons/og-image.png">
+    <meta name="theme-color" content="#230c22">
+    <noscript><style>#preloader{display:none!important}.blur-text,.fade-in,.nav-wrapper{opacity:1!important;filter:none!important;transform:none!important}</style></noscript>
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://omgirkar.me/smartnotez.html">
+    <meta property="og:site_name" content="Om Girkar">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Om Girkar – Frontend & AI/IoT Developer portfolio">
+    <meta property="og:url" content="https://omgirkar.me/smartnotez">
     <meta property="og:title" content="SmartNoteZ – AI-Powered Student Quiz Generator">
     <meta property="og:description" content="Convert notes into timed quizzes with AI. Built with Node.js, Supabase, and Gemini API.">
-    <meta property="twitter:url" content="https://omgirkar.me/smartnotez.html">
-    <meta property="twitter:title" content="SmartNoteZ – AI-Powered Student Quiz Generator">
-    <meta property="twitter:description" content="Convert notes into timed quizzes with AI. Built with Node.js, Supabase, and Gemini API.">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "SmartNoteZ",
-      "applicationCategory": "Educational Application",
-      "operatingSystem": "Web",
-      "description": "AI-powered quiz generator that converts student notes into timed tests.",
-      "url": "https://smartnotez.vercel.app/",
-      "author": {
-        "@type": "Person",
-        "name": "Om Girkar"
-      }
-    }
-    </script>
+    <meta name="twitter:url" content="https://omgirkar.me/smartnotez">
+    <meta name="twitter:title" content="SmartNoteZ – AI-Powered Student Quiz Generator">
+    <meta name="twitter:description" content="Convert notes into timed quizzes with AI. Built with Node.js, Supabase, and Gemini API.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +36,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet">
     </noscript>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
         /* Mobile-friendly adjustments for this page */
         .smartnotez-container {
@@ -107,7 +100,31 @@
         const savedTheme = localStorage.getItem('theme') || 'dark';
         document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
-    <script defer src="script.js"></script>
+    <script defer src="assets/js/script.js"></script>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSKH56NP66"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YSKH56NP66');
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "SmartNoteZ",
+  "description": "AI-powered quiz generator that turns PDF, TXT or Markdown notes into timed quizzes using Node.js, Supabase and the Gemini API.",
+  "url": "https://omgirkar.me/smartnotez",
+  "codeRepository": "https://github.com/omgirkar/SmartNoteZ",
+  "programmingLanguage": "JavaScript",
+  "author": {
+    "@type": "Person",
+    "@id": "https://omgirkar.me/#person",
+    "name": "Om Girkar"
+  }
+}
+    </script>
 </head>
 <body>
 
@@ -126,10 +143,10 @@
             <div class="nav-left">
                 <a href="/" class="nav-avatar" aria-label="Home">OG</a>
                 <div class="nav-links">
-                    <a href="index.html#skills" class="nav-link">Skills</a>
-                    <a href="index.html#work" class="nav-link">Works</a>
-                    <a href="about.html" class="nav-link">About Me</a>
-                    <a href="case-studies.html" class="nav-link">Case Studies</a>
+                    <a href="/#skills" class="nav-link">Skills</a>
+                    <a href="/#work" class="nav-link">Works</a>
+                    <a href="/about" class="nav-link">About Me</a>
+                    <a href="/case-studies" class="nav-link">Case Studies</a>
                 </div>
             </div>
             <div class="nav-actions">
@@ -144,16 +161,18 @@
     </div>
 
     <div class="mobile-menu" id="mobile-menu">
-        <a href="about.html" class="mobile-menu-link">About Me</a>
-        <a href="index.html#skills" class="mobile-menu-link">Skills</a>
-        <a href="index.html#work" class="mobile-menu-link">Works</a>
-        <a href="case-studies.html" class="mobile-menu-link">Case Studies</a>
+        <a href="/about" class="mobile-menu-link">About Me</a>
+        <a href="/#skills" class="mobile-menu-link">Skills</a>
+        <a href="/#work" class="mobile-menu-link">Works</a>
+        <a href="/case-studies" class="mobile-menu-link">Case Studies</a>
         <a href="mailto:om.girkar2@gmail.com" class="big-contact-btn" style="margin-top: 2rem;">Say Hello →</a>
     </div>
 
+    <main id="main">
+
     <!-- MAIN CONTAINER – no fade-in class here to ensure visibility on mobile -->
     <div class="smartnotez-container">
-        <a href="index.html#work" class="back-btn">← Back to Portfolio</a>
+        <a href="/#work" class="back-btn">← Back to Portfolio</a>
 
         <div class="fade-in">
             <h1 class="case-title">SmartNoteZ</h1>
@@ -174,23 +193,23 @@
 
             <div class="screenshot-grid">
                 <figure>
-                    <img src="assets/img/smartnotez/dashboard.png" alt="SmartNoteZ student dashboard showing upload section and stats">
+                    <img src="assets/img/smartnotez/dashboard.webp" width="1400" height="672" loading="lazy" alt="SmartNoteZ student dashboard showing upload section and stats">
                     <figcaption><strong>Student Dashboard</strong> — Upload notes, track attempts, and view best accuracy.</figcaption>
                 </figure>
                 <figure>
-                    <img src="assets/img/smartnotez/upload-notes.png" alt="Step 01: Adding study material with extracted text preview">
+                    <img src="assets/img/smartnotez/upload-notes.webp" width="1400" height="672" loading="lazy" alt="Step 01: Adding study material with extracted text preview">
                     <figcaption><strong>Step 01: Add Study Material</strong> — Upload PDF, TXT, or MD. Text is extracted in the browser.</figcaption>
                 </figure>
                 <figure>
-                    <img src="assets/img/smartnotez/quiz-interface.png" alt="Step 02: Timed quiz interface showing questions and options">
+                    <img src="assets/img/smartnotez/quiz-interface.webp" width="1400" height="669" loading="lazy" alt="Step 02: Timed quiz interface showing questions and options">
                     <figcaption><strong>Step 02: Timed Quiz</strong> — AI-generated questions appear with a countdown timer.</figcaption>
                 </figure>
                 <figure>
-                    <img src="assets/img/smartnotez/results.png" alt="Step 03: Quiz results showing accuracy and correct/incorrect breakdown">
+                    <img src="assets/img/smartnotez/results.webp" width="1400" height="672" loading="lazy" alt="Step 03: Quiz results showing accuracy and correct/incorrect breakdown">
                     <figcaption><strong>Step 03: Results & Accuracy</strong> — See your score, review correct answers, and track history.</figcaption>
                 </figure>
                 <figure style="grid-column: 1 / -1; max-width: 600px; justify-self: center; width: 100%;">
-                    <img src="assets/img/smartnotez/auth-email.png" alt="Supabase confirmation email for authentication">
+                    <img src="assets/img/smartnotez/auth-email.webp" width="1400" height="672" loading="lazy" alt="Supabase confirmation email for authentication">
                     <figcaption><strong>Authentication Flow</strong> — Secure sign-up powered by Supabase (email confirmation).</figcaption>
                 </figure>
             </div>
@@ -198,8 +217,8 @@
 
         <div class="case-section fade-in">
             <h2>Overview</h2>
-            <p>SmartNoteZ is a calm, aesthetic portfolio project that transforms how students study. By combining note-taking with AI-powered quiz generation, it helps students upload their study materials and automatically generate timed tests to assess their understanding.</p>
-            <p>The project was built as a full-stack web application with a focus on clean design, practical utility, and real-world learning outcomes. It is a key example of Om Girkar's ability to create useful EdTech solutions.</p>
+            <p>SmartNoteZ is a student project that transforms how students study. By combining note-taking with AI-powered quiz generation, it helps students upload their study materials and automatically generate timed tests to assess their understanding.</p>
+            <p>The project was built as a full-stack web application with a focus on clean design, practical utility, and real-world learning outcomes.</p>
             <p><strong>Live Demo:</strong> <a href="https://smartnotez.vercel.app/" target="_blank" style="color: var(--accent-10);">smartnotez.vercel.app</a></p>
         </div>
 
@@ -298,6 +317,8 @@
         </div>
     </div>
 
+    </main>
+
     <footer class="footer">
         <div class="footer-cta fade-in">
             <p class="footer-cta-title">Let's build something <br><span class="serif-italic">extraordinary.</span></p>
@@ -312,9 +333,8 @@
             <div class="footer-links-group">
                 <div class="footer-col">
                     <span>Socials</span>
-                    <a href="https://www.linkedin.com/in/om-girkar" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/om-girkar-3a4b341b8/" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
                     <a href="https://github.com/omgirkar" target="_blank" rel="noopener noreferrer me">GitHub</a>
-                    <a href="#" target="_blank" rel="noopener noreferrer me">Instagram</a>
                 </div>
                 <div class="footer-col">
                     <span>Contact</span>

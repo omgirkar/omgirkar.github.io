@@ -3,22 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaia – AI Voice Assistant & Smart Dustbin | Om Girkar IoT Project</title>
-    <meta name="description" content="Explore Avaia: an AI-powered voice assistant and smart dustbin with autonomous navigation, built with Python, ESP32, OpenAI LLMs, and Flask. Part of Om Girkar's best developer portfolio for AI and IoT.">
-    <meta name="keywords" content="Avaia, AI voice assistant, smart dustbin, ESP32, OpenAI, Python, IoT waste management, autonomous robotics, Flask, voice control, Om Girkar, girkar, best developer portfolio">
+    <title>Avaia – AI Voice Assistant & Smart Dustbin | Om Girkar</title>
+    <meta name="description" content="Avaia: a voice-controlled AI assistant and smart dustbin built with Python, Flask, OpenAI LLMs, Whisper and an ESP32.">
     <meta name="author" content="Om Girkar">
 
-    <link rel="canonical" href="https://omgirkar.me/avaia.html" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <link rel="canonical" href="https://omgirkar.me/avaia" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <meta property="og:image" content="https://omgirkar.me/assets/icons/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://omgirkar.me/assets/icons/og-image.png">
+    <meta name="theme-color" content="#230c22">
+    <noscript><style>#preloader{display:none!important}.blur-text,.fade-in,.nav-wrapper{opacity:1!important;filter:none!important;transform:none!important}</style></noscript>
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://omgirkar.me/avaia.html">
-    <meta property="og:title" content="Avaia – AI Voice Assistant & Smart Dustbin | Om Girkar IoT Project">
+    <meta property="og:site_name" content="Om Girkar">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Om Girkar – Frontend & AI/IoT Developer portfolio">
+    <meta property="og:url" content="https://omgirkar.me/avaia">
+    <meta property="og:title" content="Avaia – AI Voice Assistant & Smart Dustbin | Om Girkar">
     <meta property="og:description" content="Avaia: AI voice assistant and smart dustbin with autonomous navigation, built with Python, ESP32, and OpenAI.">
-    <meta property="twitter:url" content="https://omgirkar.me/avaia.html">
-    <meta property="twitter:title" content="Avaia – AI Voice Assistant & Smart Dustbin | Om Girkar IoT Project">
-    <meta property="twitter:description" content="Avaia: AI voice assistant and smart dustbin with autonomous navigation.">
+    <meta name="twitter:url" content="https://omgirkar.me/avaia">
+    <meta name="twitter:title" content="Avaia – AI Voice Assistant & Smart Dustbin | Om Girkar">
+    <meta name="twitter:description" content="Avaia: AI voice assistant and smart dustbin with autonomous navigation.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,12 +36,36 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet">
     </noscript>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script>
         const savedTheme = localStorage.getItem('theme') || 'dark';
         document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
-    <script defer src="script.js"></script>
+    <script defer src="assets/js/script.js"></script>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSKH56NP66"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YSKH56NP66');
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "Avaia",
+  "description": "Voice-controlled AI assistant and robotic smart dustbin built with Python, Flask, Whisper, OpenAI LLMs and an ESP32.",
+  "url": "https://omgirkar.me/avaia",
+  "codeRepository": "https://github.com/omgirkar/Avaia",
+  "programmingLanguage": "Python",
+  "author": {
+    "@type": "Person",
+    "@id": "https://omgirkar.me/#person",
+    "name": "Om Girkar"
+  }
+}
+    </script>
 </head>
 <body>
 
@@ -51,10 +84,10 @@
             <div class="nav-left">
                 <a href="/" class="nav-avatar" aria-label="Home">OG</a>
                 <div class="nav-links">
-                    <a href="index.html#skills" class="nav-link">Skills</a>
-                    <a href="index.html#work" class="nav-link">Works</a>
-                    <a href="about.html" class="nav-link">About Me</a>
-                    <a href="case-studies.html" class="nav-link">Case Studies</a>
+                    <a href="/#skills" class="nav-link">Skills</a>
+                    <a href="/#work" class="nav-link">Works</a>
+                    <a href="/about" class="nav-link">About Me</a>
+                    <a href="/case-studies" class="nav-link">Case Studies</a>
                 </div>
             </div>
             <div class="nav-actions">
@@ -69,15 +102,17 @@
     </div>
 
     <div class="mobile-menu" id="mobile-menu">
-        <a href="about.html" class="mobile-menu-link">About Me</a>
-        <a href="index.html#skills" class="mobile-menu-link">Skills</a>
-        <a href="index.html#work" class="mobile-menu-link">Works</a>
-        <a href="case-studies.html" class="mobile-menu-link">Case Studies</a>
+        <a href="/about" class="mobile-menu-link">About Me</a>
+        <a href="/#skills" class="mobile-menu-link">Skills</a>
+        <a href="/#work" class="mobile-menu-link">Works</a>
+        <a href="/case-studies" class="mobile-menu-link">Case Studies</a>
         <a href="mailto:om.girkar2@gmail.com" class="big-contact-btn" style="margin-top: 2rem;">Say Hello →</a>
     </div>
 
+    <main id="main">
+
     <div class="case-study-container fade-in" style="margin-top: 10rem;">
-        <a href="index.html#work" class="back-btn">← Back to Portfolio</a>
+        <a href="/#work" class="back-btn">← Back to Portfolio</a>
         <h1 class="case-title">Avaia: AI Voice Assistant & Smart Dustbin</h1>
         <div class="case-meta">
             <span class="tag">Python</span>
@@ -88,7 +123,7 @@
         
         <div class="case-section">
             <h2>Project Overview</h2>
-            <p>Avaia is an AI-powered smart robotics project originally designed for a CS exhibition. It combines custom hardware control using an ESP32 microcontroller with a Python Flask backend for advanced AI integration. By leveraging OpenAI's LLMs alongside speech-to-text functionality, the project transcends simple hardware, turning a robotic dustbin into an interactive, voice-controlled entity that can respond to natural language commands, move towards the user, open its lid, and navigate back to a home base. This project is a highlight of Om Girkar's portfolio, showcasing his skills in both software and hardware integration.</p>
+            <p>Avaia is an AI-powered smart robotics project originally designed for a CS exhibition. It combines custom hardware control using an ESP32 microcontroller with a Python Flask backend for advanced AI integration. By leveraging OpenAI's LLMs alongside speech-to-text functionality, the project transcends simple hardware, turning a robotic dustbin into an interactive, voice-controlled entity that can respond to natural language commands, move towards the user, open its lid, and navigate back to a home base.</p>
         </div>
         
         <div class="case-section">
@@ -119,6 +154,8 @@
         </div>
     </div>
 
+    </main>
+
     <footer class="footer">
         <div class="footer-cta fade-in">
             <p class="footer-cta-title">Let's build something <br><span class="serif-italic">extraordinary.</span></p>
@@ -134,9 +171,8 @@
             <div class="footer-links-group">
                 <div class="footer-col">
                     <span>Socials</span>
-                    <a href="https://www.linkedin.com/in/om-girkar/" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/om-girkar-3a4b341b8/" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
                     <a href="https://github.com/omgirkar" target="_blank" rel="noopener noreferrer me">GitHub</a>
-                    <a href="#" target="_blank" rel="noopener noreferrer me">Instagram</a>
                 </div>
                 <div class="footer-col">
                     <span>Contact</span>

@@ -3,22 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GuideX – Automatic Blind Stick for Visually Impaired | Om Girkar Assistive Tech</title>
-    <meta name="description" content="GuideX is an automatic blind stick using ultrasonic sensors and haptic feedback to help visually impaired individuals navigate safely. Part of Om Girkar's best developer portfolio for assistive technology and IoT.">
-    <meta name="keywords" content="GuideX, automatic blind stick, assistive device for blind, visually impaired, ultrasonic stick, Arduino Nano, haptic feedback, C++, assistive technology, Om Girkar, girkar, best developer portfolio">
+    <title>GuideX – Arduino Blind Stick | Om Girkar</title>
+    <meta name="description" content="GuideX is an automatic blind stick that uses an ultrasonic sensor and an Arduino Nano to alert visually impaired users to obstacles.">
     <meta name="author" content="Om Girkar">
 
-    <link rel="canonical" href="https://omgirkar.me/guidex.html" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <link rel="canonical" href="https://omgirkar.me/guidex" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+    <meta property="og:image" content="https://omgirkar.me/assets/icons/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://omgirkar.me/assets/icons/og-image.png">
+    <meta name="theme-color" content="#230c22">
+    <noscript><style>#preloader{display:none!important}.blur-text,.fade-in,.nav-wrapper{opacity:1!important;filter:none!important;transform:none!important}</style></noscript>
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://omgirkar.me/guidex.html">
-    <meta property="og:title" content="GuideX – Automatic Blind Stick | Om Girkar Assistive Tech">
-    <meta property="og:description" content="GuideX: an automatic blind stick using ultrasonic sensors and haptic feedback for safer navigation.">
-    <meta property="twitter:url" content="https://omgirkar.me/guidex.html">
-    <meta property="twitter:title" content="GuideX – Automatic Blind Stick | Om Girkar Assistive Tech">
-    <meta property="twitter:description" content="GuideX: an automatic blind stick using ultrasonic sensors and haptic feedback.">
+    <meta property="og:site_name" content="Om Girkar">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Om Girkar – Frontend & AI/IoT Developer portfolio">
+    <meta property="og:url" content="https://omgirkar.me/guidex">
+    <meta property="og:title" content="GuideX – Arduino Blind Stick | Om Girkar">
+    <meta property="og:description" content="GuideX: an automatic blind stick using an ultrasonic sensor and a buzzer to warn of obstacles.">
+    <meta name="twitter:url" content="https://omgirkar.me/guidex">
+    <meta name="twitter:title" content="GuideX – Arduino Blind Stick | Om Girkar">
+    <meta name="twitter:description" content="GuideX: an automatic blind stick using an ultrasonic sensor and a buzzer to warn of obstacles.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,12 +36,37 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,500;1,600&display=swap" rel="stylesheet">
     </noscript>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script>
         const savedTheme = localStorage.getItem('theme') || 'dark';
         document.documentElement.setAttribute('data-theme', savedTheme);
     </script>
-    <script defer src="script.js"></script>
+    <script defer src="assets/js/script.js"></script>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSKH56NP66"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-YSKH56NP66');
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "GuideX",
+  "description": "Automatic blind stick that uses an ultrasonic sensor, a buzzer and an Arduino Nano to warn visually impaired users of obstacles.",
+  "url": "https://omgirkar.me/guidex",
+  "image": "https://omgirkar.me/assets/img/guidex/guidex-stick.webp",
+  "codeRepository": "https://github.com/omgirkar/GuideX",
+  "programmingLanguage": "C++",
+  "author": {
+    "@type": "Person",
+    "@id": "https://omgirkar.me/#person",
+    "name": "Om Girkar"
+  }
+}
+    </script>
 </head>
 <body>
 
@@ -51,10 +85,10 @@
             <div class="nav-left">
                 <a href="/" class="nav-avatar" aria-label="Home">OG</a>
                 <div class="nav-links">
-                    <a href="index.html#skills" class="nav-link">Skills</a>
-                    <a href="index.html#work" class="nav-link">Works</a>
-                    <a href="about.html" class="nav-link">About Me</a>
-                    <a href="case-studies.html" class="nav-link">Case Studies</a>
+                    <a href="/#skills" class="nav-link">Skills</a>
+                    <a href="/#work" class="nav-link">Works</a>
+                    <a href="/about" class="nav-link">About Me</a>
+                    <a href="/case-studies" class="nav-link">Case Studies</a>
                 </div>
             </div>
             <div class="nav-actions">
@@ -69,15 +103,17 @@
     </div>
 
     <div class="mobile-menu" id="mobile-menu">
-        <a href="about.html" class="mobile-menu-link">About Me</a>
-        <a href="index.html#skills" class="mobile-menu-link">Skills</a>
-        <a href="index.html#work" class="mobile-menu-link">Works</a>
-        <a href="case-studies.html" class="mobile-menu-link">Case Studies</a>
+        <a href="/about" class="mobile-menu-link">About Me</a>
+        <a href="/#skills" class="mobile-menu-link">Skills</a>
+        <a href="/#work" class="mobile-menu-link">Works</a>
+        <a href="/case-studies" class="mobile-menu-link">Case Studies</a>
         <a href="mailto:om.girkar2@gmail.com" class="big-contact-btn" style="margin-top: 2rem;">Say Hello →</a>
     </div>
 
+    <main id="main">
+
     <div class="case-study-container fade-in" style="margin-top: 10rem;">
-        <a href="index.html#work" class="back-btn">← Back to Portfolio</a>
+        <a href="/#work" class="back-btn">← Back to Portfolio</a>
         <h1 class="case-title">GuideX: Automatic Blind Stick</h1>
         <div class="case-meta">
             <span class="tag">Arduino Nano</span>
@@ -88,14 +124,18 @@
         
         <div class="case-section">
             <h2>Project Overview</h2>
-            <p>GuideX is an assistive hardware prototype designed specifically for visually impaired individuals. It replaces the traditional white cane with a smart, battery-powered stick that uses ultrasonic wave reflection to map the user's immediate environment. When obstacles fall within a hazardous threshold, the user is alerted via auditory haptic feedback, vastly improving navigation and physical safety. This project demonstrates Om Girkar's commitment to using technology for social good and is a key part of his developer portfolio.</p>
+            <p>GuideX is an assistive hardware prototype designed specifically for visually impaired individuals. It replaces the traditional white cane with a smart, battery-powered stick that uses ultrasonic wave reflection to map the user's immediate environment. When obstacles fall within a hazardous threshold, the user is alerted by an audible buzzer, vastly improving navigation and physical safety.</p>
+            <figure class="project-photo">
+                <img src="assets/img/guidex/guidex-stick.webp" width="868" height="876" loading="lazy" alt="GuideX blind stick prototype: a black cane with red-taped grips, held in one hand">
+                <figcaption>The GuideX prototype.</figcaption>
+            </figure>
         </div>
         
         <div class="case-section">
             <h2>Key Features</h2>
             <ul class="feature-list">
                 <li><strong>Real-time Obstacle Detection:</strong> Continuous pinging using ultrasonic sound waves to measure exact distances to objects.</li>
-                <li><strong>Instant Feedback:</strong> Immediate buzzer and haptic alerts when an object is detected within the predefined danger radius.</li>
+                <li><strong>Instant Feedback:</strong> Immediate buzzer alerts when an object is detected within the predefined danger radius.</li>
                 <li><strong>Wireless & Portable:</strong> Completely battery-powered (Li-ion) to ensure it acts as a lightweight, everyday tool.</li>
                 <li><strong>Hard-Soldered Reliability:</strong> Built completely without breadboards, utilizing direct soldering for a compact and durable physical footprint.</li>
             </ul>
@@ -118,6 +158,8 @@
         </div>
     </div>
 
+    </main>
+
     <footer class="footer">
         <div class="footer-cta fade-in">
             <p class="footer-cta-title">Let's build something <br><span class="serif-italic">extraordinary.</span></p>
@@ -133,9 +175,8 @@
             <div class="footer-links-group">
                 <div class="footer-col">
                     <span>Socials</span>
-                    <a href="https://www.linkedin.com/in/om-girkar" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/om-girkar-3a4b341b8/" target="_blank" rel="noopener noreferrer me">LinkedIn</a>
                     <a href="https://github.com/omgirkar" target="_blank" rel="noopener noreferrer me">GitHub</a>
-                    <a href="#" target="_blank" rel="noopener noreferrer me">Instagram</a>
                 </div>
                 <div class="footer-col">
                     <span>Contact</span>
